@@ -9,9 +9,9 @@ class Clash {
     public double resoultClash(Teams teams1, Teams teams2) {
         if (clash(teams1, teams2) < clash(teams2, teams1)) {
             System.out.print("Druzyna 1 wygrywa, pozostalo jej: ");
-            return teams1.totalHp();
+            return clash(teams1,teams2);
         } else System.out.print("Druzyna 2 wygrywa, pozostalo jej: ");
-        return teams2.totalHp();
+        return clash(teams2,teams1);
     }
 
 }

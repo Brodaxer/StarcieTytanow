@@ -8,8 +8,8 @@ public class Test {
         aluchy.add(new Dps("miecznik", 100, 100, 50));
         aluchy.add(new Tank("tarczownik", 120, 40, 100));
         aluchy.add(new GameCharacter("drot", 40, 50, 60));
-        keki.add(new GameCharacter("lucznik", 100, 100, 50));
-        keki.add(new Dps("lucznik", 100, 100, 50));
+        keki.add(new GameCharacter("lucznik", 100, 100, 10));
+        keki.add(new Dps("lucznik", 100, 100, 10));
         keki.add(new Tank("lucznik", 100, 100, 100));
 
 
