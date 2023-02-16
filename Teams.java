@@ -3,7 +3,6 @@ class Teams {
     private GameCharacter[] randoms = new GameCharacter[MAX_PARTY_SIZE];
     private int partySize = 0;
 
-
     public void add(GameCharacter gameCharacter) {
         if (partySize < MAX_PARTY_SIZE) {
             randoms[partySize] = gameCharacter;
@@ -35,13 +34,11 @@ class Teams {
         return c;
     }
 
-//    public double clash(Teams teams1,Teams teams2) {
-//        if (teams1.sumDps() < teams2.sumDef()) {
-//            System.out.print("Atak nie przebil obrony: ");
-//            return teams2.getTotalHp();
-//        } else
-//            System.out.print("Pozostale HP: ");
-//            return teams2.getTotalHp() - (teams1.sumDps() - teams2.sumDef());
-//    }
+    public double attack(Teams teams) {
+        if (sumDps() < teams.sumDef()) {
+            return teams.totalHp();
+        } else
+            return teams.totalHp() - (sumDps() - teams.sumDef());
+    }
 
 }

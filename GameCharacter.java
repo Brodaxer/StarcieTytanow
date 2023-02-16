@@ -1,4 +1,4 @@
-class GameCharacter {
+class GameCharacter  {
     private String name;
     private double hp;
     private double dmg;

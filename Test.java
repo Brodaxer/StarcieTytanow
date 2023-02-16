@@ -1,19 +1,22 @@
 public class Test {
     public static void main(String[] args) {
-        //GameCharacter dps = new Dps("lucznik", 100, 100, 50);
+
         Teams keki = new Teams();
         Teams aluchy = new Teams();
-        Clash test = new Clash();
+       
 
         aluchy.add(new Dps("miecznik", 100, 100, 50));
-        aluchy.add(new Tank("tarczownik", 120, 40, 100));
-        aluchy.add(new GameCharacter("drot", 40, 50, 60));
-        keki.add(new GameCharacter("lucznik", 100, 100, 10));
+        aluchy.add(new Tank("tarczownik", 100, 40, 100));
+        aluchy.add(new Dps("drot", 100, 50, 60));
+        keki.add(new Tank("lucznik", 100, 100, 50));
         keki.add(new Dps("lucznik", 100, 100, 10));
         keki.add(new Tank("lucznik", 100, 100, 100));
 
+//        System.out.println(keki.attack(aluchy));
+//        System.out.println(aluchy.attack(keki));
+        if (keki.attack(aluchy)<aluchy.attack(keki)){
+            System.out.println("Team2 wygrywa");
+        }else System.out.println("Team1 wygrywa");
 
-        System.out.println(test.resoultClash(aluchy, keki));
-        System.out.println(test.resoultClash(keki,aluchy));
     }
 }
